@@ -13,7 +13,7 @@ local ButtonBar = Bartender4.ButtonBar.prototype
 local pairs, setmetatable, table_insert = pairs, setmetatable, table.insert
 
 -- GLOBALS: CharacterMicroButton, SpellbookMicroButton, TalentMicroButton, AchievementMicroButton, QuestLogMicroButton, GuildMicroButton
--- GLOBALS: LFDMicroButton, CollectionsMicroButton, EJMicroButton, MainMenuMicroButton
+-- GLOBALS: PVPMicroButton, LFDMicroButton, CollectionsMicroButton, EJMicroButton, MainMenuMicroButton, HelpMicroButton
 -- GLOBALS: HasVehicleActionBar, UnitVehicleSkin, HasOverrideActionBar, GetOverrideBarSkin
 
 -- create prototype information
@@ -47,11 +47,13 @@ function MicroMenuMod:OnEnable()
 		table_insert(buttons, AchievementMicroButton)
 		table_insert(buttons, QuestLogMicroButton)
 		table_insert(buttons, GuildMicroButton)
+		table_insert(buttons, PVPMicroButton)
 		table_insert(buttons, LFDMicroButton)
 		table_insert(buttons, CollectionsMicroButton)
 		table_insert(buttons, EJMicroButton)
 		table_insert(buttons, StoreMicroButton)
 		table_insert(buttons, MainMenuMicroButton)
+		table_insert(buttons, HelpMicroButton)
 		self.bar.buttons = buttons
 
 		MicroMenuMod.button_count = #buttons
